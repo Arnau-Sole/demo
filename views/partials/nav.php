@@ -10,7 +10,9 @@
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
               <a href="/" class="<?= urlIs('/') ? 'bg-gray-900 text-white' : 'text-gray-300'; ?> rounded-md  px-3 py-2 text-sm font-medium hover:bg-white/5 hover:text-white">Home</a>
               <a href="/about" aria-current="page" class="<?= urlIs('/about') ? 'bg-gray-900 text-white' : 'text-gray-300'; ?> rounded-md px-3 py-2 text-sm font-medium hover:bg-white/5 hover:text-white">About</a>
+              <?php if($_SESSION['user'] ?? false) : ?>
               <a href="/notes" aria-current="page" class="<?= urlIs('/notes') ? 'bg-gray-900 text-white' : 'text-gray-300'; ?> rounded-md px-3 py-2 text-sm font-medium hover:bg-white/5 hover:text-white">Notes</a>
+              <?php endif; ?>
               <a href="/contact" class="<?= urlIs('/contact') ? 'bg-gray-900 text-white' : 'text-gray-300'; ?> rounded-md px-3 py-2 text-sm font-medium hover:bg-white/5 hover:text-white">Contact</a>
             </div>
           </div>
